@@ -1,0 +1,85 @@
+<script type="text/javascript">
+    RED.nodes.registerType('dictionary', {
+        category: 'function',
+        color: '#4acaaf',
+        defaults: {
+            name: { value: "" },
+            listVals: { value: [] },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function () {
+            return this.name || "dictionary";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        },
+        oneditprepare: function () {
+            $('#node-input-condition-container')
+                .css('min-height', '150px')
+                .css('min-width', '450px')
+                .editableList({
+                    addItem: function (subrow, subindex, subdata) {
+                        let subfragment = document.createDocumentFragment();
+                        var subrows = $('<div/>', { class: "form-row", style: "display:flex;" }).appendTo(subfragment);
+                        $('<label/>', { class: "node-sub-input-path-key", style: "flex:1 1 auto; margin-top: 15px;" })
+                            .text('Object Path')
+                            .appendTo(subrows);
+                        $('<input/>', { class: "node-sub-input-key", type: "text", placeholder: "key", value: subdata.key, style: "display:inline-block;text-align:right; width:110px; box-sizing:border-box;" })
+                            .appendTo(subrows)
+                            .typedInput({ default: 'str', types: ['str'] });
+                        $('<input/>', { class: "node-sub-input-path", type: "text", placeholder: "path", value: subdata.path, style: "display:inline-block;text-align:right;margin:10px; box-sizing:border-box;" })
+                            .appendTo(subrows)
+                            .typedInput({ default: 'str', types: ['str'] });
+
+                        subrow[0].appendChild(subfragment);
+                    },
+                    removable: true,
+                    sortable: true
+                });
+            if (!this.listVals) {
+                this.listVals = [];
+            }
+            console.log('this.listVals', this.listVals);
+            for (var i = 0; i < this.listVals.length; i++) {
+                $('#node-input-condition-container').editableList('addItem', this.listVals[i]);
+
+            }
+        },
+        oneditsave: function () {
+            var node = this;
+
+            var listVals = $("#node-input-condition-container").editableList('items');
+            node.listVals = [];
+            listVals.each(function (i) {
+                var listValObj = $(this);
+                var listVals = listValObj.find(".node-sub-input-path").val();
+                var keylistVals = listValObj.find(".node-sub-input-key").val();
+                let data = {
+                    key: keylistVals,
+                    path: listVals
+                };
+                node.listVals.push(data);
+            });
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="dictionary">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-info">dictionary</label>
+    </div>
+    <div class="form-row node-input-mult-container-row">
+        <ol id="node-input-condition-container"></ol>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="dictionary">
+    <p>Dictionary node : this node return's a list of dictionary from input data</p>
+</script>
