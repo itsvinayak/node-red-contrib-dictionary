@@ -21,7 +21,7 @@
     ],
     "author": "Vinayak",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha \"test/**/*_spec.js\""
     },
     "node-red": {
         "nodes": {
@@ -36,5 +36,9 @@
         "url": "https://github.com/itsvinayak/dictionary-node/issues"
     },
     "homepage": "https://github.com/itsvinayak/dictionary-node#readme",
-    "devDependencies": {}
+    "devDependencies": {
+        "mocha": "^10.1.0",
+        "node-red": "^3.0.2",
+        "node-red-node-test-helper": "^0.3.0"
+    }
 }
