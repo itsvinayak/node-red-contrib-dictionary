@@ -1,6 +1,6 @@
 {
-    "name": "@itsvinayak/dictionary-node",
-    "version": "1.0.2",
+    "name": "dictionary-node",
+    "version": "1.0.0",
     "description": "node for node red with dictionary ui",
     "main": "dictionary.js",
     "repository": {
