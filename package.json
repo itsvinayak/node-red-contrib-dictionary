@@ -8,9 +8,6 @@
         "url": "git+https://github.com/itsvinayak/dictionary-node.git"
     },
     "publisher": "itsvinayak",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "keywords": [
         "node-red",
         "node-red-node",
