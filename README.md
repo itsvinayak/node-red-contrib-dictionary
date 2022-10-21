@@ -2,9 +2,8 @@
 ###  dictionary node for node-red
 
 
-
 A dictionary is a general-purpose data structure for storing a group of objects.It is a set of keys and each key has a single associated value.
-**Example of dictionary**
+### Example of dictionary
 
 ```
 {
