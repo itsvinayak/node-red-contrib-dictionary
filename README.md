@@ -1,4 +1,4 @@
-# dictionary-node
+# dictionary-node [![Node.js CI](https://github.com/itsvinayak/dictionary-node/actions/workflows/npm-ci.yml/badge.svg?branch=main)](https://github.com/itsvinayak/dictionary-node/actions/workflows/npm-ci.yml)
 ###  dictionary node for node-red
 
 
