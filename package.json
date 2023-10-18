@@ -26,9 +26,9 @@
         "test": "mocha \"test/**/*_spec.js\""
     },
     "node-red": {
+        "version": ">=2.0.0"
         "nodes": {
-            "dictionary": "dictionary.js",
-            "version": ">=2.0.0"
+            "dictionary": "dictionary.js"
         }
     },
     "license": "MIT",
