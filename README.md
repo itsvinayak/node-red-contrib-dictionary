@@ -1,8 +1,8 @@
-# node-red-dictionary-node [![Node.js CI](https://github.com/itsvinayak/dictionary-node/actions/workflows/npm-ci.yml/badge.svg?branch=main)](https://github.com/itsvinayak/dictionary-node/actions/workflows/npm-ci.yml)
+# node-red-dictionary-node [![Node.js CI](https://github.com/itsvinayak/node-red-dictionary-node/actions/workflows/npm-ci.yml/badge.svg?branch=main)](https://github.com/itsvinayak/node-red-dictionary-node/actions/workflows/npm-ci.yml)
 
 ###  dictionary node for node-red
 
-A dictionary is a general-purpose data structure for storing a group of objects.It is a set of keys and each key has a single associated value.
+A dictionary is a general-purpose data structure for storing a group of objects. It is a set of keys with a single associated value.
 
 ### Example of dictionary
 
@@ -20,9 +20,9 @@ A dictionary is a general-purpose data structure for storing a group of objects.
 }
 ```
 
-## What this node do :
+## What this node does:
 
-this node takes a dictionary/json and allows user to create a other dictionary, based on user keys and value ( path of objects )
+this node takes a dictionary/json and allows the user to create an other dictionary, based on user keys and values ( path of objects )
 
 **Input:**
 
