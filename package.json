@@ -1,6 +1,6 @@
 {
     "name": "node-red-dictionary-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "node for node red with dictionary ui",
     "main": "dictionary.js",
     "repository": {
