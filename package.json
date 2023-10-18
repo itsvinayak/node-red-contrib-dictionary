@@ -1,11 +1,11 @@
 {
-    "name": "dictionary-node",
+    "name": "node-red-dictionary-node",
     "version": "1.0.0",
     "description": "node for node red with dictionary ui",
     "main": "dictionary.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/itsvinayak/dictionary-node.git"
+        "url": "git+https://github.com/itsvinayak/node-red-dictionary-node.git"
     },
     "publisher": "itsvinayak",
     "keywords": [
@@ -14,7 +14,9 @@
         "node-red-node-ui",
         "node-red-node-ui-dictionary",
         "dictionary",
-        "ui"
+        "ui",
+        "list",
+        "dropdown"
     ],
     "author": "Vinayak",
     "scripts": {
@@ -30,9 +32,9 @@
         "object-path": "^0.11.8"
     },
     "bugs": {
-        "url": "https://github.com/itsvinayak/dictionary-node/issues"
+        "url": "https://github.com/itsvinayak/node-red-dictionary-node/issues"
     },
-    "homepage": "https://github.com/itsvinayak/dictionary-node#readme",
+    "homepage": "https://github.com/itsvinayak/node-red-dictionary-node#readme",
     "devDependencies": {
         "mocha": "^10.1.0",
         "node-red": "^3.0.2",

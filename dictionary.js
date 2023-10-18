@@ -1,9 +1,9 @@
-var objectPath = require('object-path');
+let objectPath = require('object-path');
 
 module.exports = function (RED) {
     function dictionaryFunction(config) {
         RED.nodes.createNode(this, config);
-        var node = this;
+        let node = this;
 
         node.on('input', function (msg, send, done) {
             let data = {};

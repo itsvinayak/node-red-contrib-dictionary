@@ -22,7 +22,7 @@
                 .editableList({
                     addItem: function (subrow, subindex, subdata) {
                         let subfragment = document.createDocumentFragment();
-                        var subrows = $('<div/>', { class: "form-row", style: "display:flex;" }).appendTo(subfragment);
+                        let subrows = $('<div/>', { class: "form-row", style: "display:flex;" }).appendTo(subfragment);
                         $('<label/>', { class: "node-sub-input-path-key", style: "flex:1 1 auto; margin-top: 15px;" })
                             .text('Object Path')
                             .appendTo(subrows);
@@ -42,9 +42,8 @@
                 this.listVals = [];
             }
             console.log('this.listVals', this.listVals);
-            for (var i = 0; i < this.listVals.length; i++) {
-                $('#node-input-condition-container').editableList('addItem', this.listVals[i]);
-
+            for (const element of this.listVals) {
+                $('#node-input-condition-container').editableList('addItem', element);
             }
         },
         oneditsave: function () {
