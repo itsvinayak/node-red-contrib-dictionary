@@ -1,0 +1,25 @@
+[
+    {
+        "id": "c0aa3cb8c09e1c8a",
+        "type": "dictionary",
+        "z": "4ff28594e962563c",
+        "name": "",
+        "listVals": [
+            {
+                "key": "payload.living men",
+                "path": "payload.living.men"
+            },
+            {
+                "key": "payload.nonliving table",
+                "path": "payload.nonliving.table"
+            }
+        ],
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "eab991f07ea13893"
+            ]
+        ]
+    }
+]
